@@ -1,0 +1,36 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html style="background-color: #c6e2ee">
+    <head>
+        <title>Twitter Meter</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="bootstrap-1.2.0.min.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
+        
+        <script>
+            setInterval(function() {
+                $.getJSON("api", function() {
+                    $("#chart").attr("src", "peo");
+                });
+            }, 60*1000);
+        </script>
+    </head>
+    <body style="background-color: #c6e2ee; padding-top: 40px">
+        <div class="topbar">
+            <div class="topbar-inner">
+                <div class="container">
+                    <h3><a href="#">Twitter Meter</a></h3>
+                    <img src="http://a.dryicons.com/images/icon_sets/minimalistica_icons/png/48x48/television.png" style="width: 30px" />
+                </div>
+            </div><!-- /topbar-inner -->
+        </div>
+        
+        <div class="container well" style="width: 800px; background-color: #c6e2ee">
+            <h1 style="padding-top: 20px">El People Meter en Twitter</h1>
+            <img id="chart" src="http://i191.photobucket.com/albums/z127/spinefixr/flat.jpg" />
+        </div>
+    </body>
+</html>
